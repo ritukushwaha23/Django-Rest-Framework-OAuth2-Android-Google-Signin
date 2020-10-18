@@ -84,11 +84,11 @@ public class LoginActivity extends Activity {
 
     private void updateUI(final GoogleSignInAccount account)  {
         if(account == null){
-            Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show();
+            //Handle unsuccessful sign in here
         }
         else {
             AuthUtils.getAccessToken(getApplicationContext(), account);
-            Toast.makeText(this, "access_token", Toast.LENGTH_LONG).show();
+	    //Handle unsuccessful sign in here   
         }
     }
 }

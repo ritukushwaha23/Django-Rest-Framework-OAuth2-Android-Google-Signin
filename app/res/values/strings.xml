@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">SDEMasters</string>
-    <string name="google_client_id">899954494651-j7fcv7fmpqu88420jsqcju854ifpi4qb.apps.googleusercontent.com</string>
-    <string name="backend_client_id">XxLAxQxodCiesbB3sMC5FqhJ3DXNEuF5iEs184pg</string>
-    <string name="backend_client_secret">CVYyL67GBfDsnjzJwvRa6eSGEWVbaOGnjABCL4pei2v3lBSkOg6JoFYYOiqJYSJ8GpgeBirzlo0OAjJQkaVGkLdA4X78nLZJ49eo5aiGYgTRCyySltzwzv1bkUNXH3dw</string>
-    <string name="google_client_secret">aZyRUPMPcI1NxcxrkFtatn1H</string>
+    <string name="google_client_id">your google client id</string>
+    <string name="backend_client_id">your backend client id</string>
+    <string name="backend_client_secret">your backend client secret</string>
+    <string name="google_client_secret">your google client secret</string>
     <string name="preference_file_key">com.sdemasters.app</string>
     <string name="is_logged_in">is_logged_in</string>
     <string name="access_token">access_token</string>

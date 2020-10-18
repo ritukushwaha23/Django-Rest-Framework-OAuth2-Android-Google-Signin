@@ -13,21 +13,27 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        //TODO check for access token validity, if it is invalid/expired refresh the access token using refresh token
-        //TODO if refresh token is invalid, follow the oauth2 flow again.
-
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
+	//check if user is already logged in using shared preferences flag
+	
         if(sharedPref.contains("is_logged_in")){         //if user is logged in
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             finish();
             startActivity(intent);
         }
+
+	//if failed, present login screen
         else{
             Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
             finish();
             startActivity(intent);
         }
+
+	//TODO:
+	//Add code for checking validity of access token
+	//If access_token is expired, then refresh the access token, using refresh token
+	//If refresh_token is also expired, present google signin popup again and get new access token using convert-token endpoint.
     }
 }
