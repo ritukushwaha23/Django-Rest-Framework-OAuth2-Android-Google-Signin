@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         logout_btn = findViewById(R.id.logout_btn);
-        logout_btn.setOnClickListener(new View.OnClickListener() {
+        logout_btn.setOnClickListener(new View.OnClickListener() {  //Handle logout action
             @Override
             public void onClick(View v) {
                 SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
 
                 Toast.makeText(MainActivity.this, sharedPref.getString(getString(R.string.access_token), null), Toast.LENGTH_LONG).show();
 
+		// remove data from sharedpreferences
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.remove(getString(R.string.is_logged_in));
                 editor.remove(getString(R.string.access_token));

@@ -17,6 +17,7 @@ public class AuthUtils{
         final String[] access_token = new String[1];
         final VolleySingleton volleySingleton = VolleySingleton.getInstance(context);
         try{
+	    // api call to get google access token from ServerAuthCode
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("grant_type", "authorization_code");
             jsonObject.put("client_id", context.getString(R.string.google_client_id));
@@ -31,6 +32,7 @@ public class AuthUtils{
                     try {
                        access_token[0] = response.getString("access_token");
                             try {
+				// api call to convert Google access token to Django backend refresh token
                                 JSONObject jsonObject1 = new JSONObject();
                                 jsonObject1.put("grant_type", "convert_token");
                                 jsonObject1.put("client_id", context.getString(R.string.backend_client_id));
